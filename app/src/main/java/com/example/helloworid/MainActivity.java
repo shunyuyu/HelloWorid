@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 String pwd = mBinding.editPwd.getText().toString();
                 if(phone.equals("10086")&&pwd.equals("123456")){
                     Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                    intent.putExtra("data_phone",phone);
                     startActivity(intent);
                 }
                 else {
