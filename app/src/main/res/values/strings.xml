@@ -64,4 +64,8 @@
     <string name="andriod">Android</string>
     <string name="appraise">星评价</string>
     <string name="okno">请先输入数值再点确认！</string>
+    <string name="nihao">您好，欢迎使用</string>
+    <string name="phone">手机号码</string>
+    <string name="sex">性别</string>
+    <string name="sms">是否接受推送</string>
 </resources>
