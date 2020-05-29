@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (!protocol) {
                     toast = "请同意本软件相关协议和策略！";
                 } else {
-                    SharedPreferences sp = getSharedPreferences("nser_info", MODE_PRIVATE);
+                    SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
                     String temp = sp.getString("phone_" + phone, "0");
                     if (!temp.equals("0")) {
                         toast = "该手机号码已被注册";
