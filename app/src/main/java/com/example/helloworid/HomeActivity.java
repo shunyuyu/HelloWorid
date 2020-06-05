@@ -19,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private ActivityHomeBinding mBinding;
     private long exitTime = 0;
+    public static final String EXIT_HOME="exit_home";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class HomeActivity extends AppCompatActivity {
         mBinding.textSex.setText(userSex);
         String temp = mBinding.textSms.getText().toString() + "是否接受推送:" + userSms;
         mBinding.textSms.setText(temp);
+        intent.putExtra(EXIT_HOME,"您已退出账号");
+        setResult(RESULT_OK,intent);
     }
 
     /**
