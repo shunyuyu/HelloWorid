@@ -129,6 +129,7 @@
         android:ems="10"
         android:hint="@string/phone"
         android:inputType="phone"
+        android:maxLength="11"
         app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="@+id/guideline35"

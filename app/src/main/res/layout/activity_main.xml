@@ -137,7 +137,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_rest_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/wangji"
