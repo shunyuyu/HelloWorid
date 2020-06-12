@@ -68,4 +68,9 @@
     <string name="phone">手机号码</string>
     <string name="sex">性别</string>
     <string name="sms">是否接受推送</string>
+    <string name="Authentication">身份信息验证</string>
+    <string name="a_name">请输入您账号的昵称</string>
+    <string name="a_shouji">请输入手机号码</string>
+    <string name="new_pwd" >请输入新密码</string>
+    <string name="reset_pwd">重置密码</string>
 </resources>
