@@ -29,18 +29,24 @@ public class UpdatePwdActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String pwd = mBinding.editPassword.getText().toString().trim();
                 String pwdOK = mBinding.editPasswordOk.getText().toString().trim();
-                if(!pwd.equals(pwdOK)){
-                    Toast.makeText(UpdatePwdActivity.this, "两次密码不一致,请重新输入！", Toast.LENGTH_LONG).show();
-                }else {
-                    SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
-                    String phone = getIntent().getStringExtra("phone_");
-                    SharedPreferences.Editor editor = sp.edit();
-                    editor.putString("pwd_"+phone,pwd);
-                    editor.apply();
-                    Toast.makeText(UpdatePwdActivity.this, "修改成功！", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(UpdatePwdActivity.this,MainActivity.class);
-                    startActivity(intent);
+                String toast;
+                if(pwd.length()==6){
+                    if(!pwd.equals(pwdOK)){
+                        toast="两次密码不一致,请重新输入！";
+                    }else {
+                        SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
+                        String phone = getIntent().getStringExtra("phone_");
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("pwd_"+phone,pwd).apply();
+                        Intent intent = new Intent(UpdatePwdActivity.this,MainActivity.class);
+                        startActivity(intent);
+                        toast ="修改成功！";
+                    }
+                } else {
+                    toast="密码必须是六位！";
                 }
+
+                Toast.makeText(UpdatePwdActivity.this, toast, Toast.LENGTH_LONG).show();
             }
         });
     }
