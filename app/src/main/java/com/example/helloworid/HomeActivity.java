@@ -62,6 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         Bundle bundle= new Bundle();
         UserInfo userInfo = new UserInfo(userName,pwd,userSex,phone,userSms);
         bundle.putSerializable("userInfo",userInfo);
+        intent.putExtras(bundle);
         activity.startActivityForResult(intent,resultCode);
     }
 
