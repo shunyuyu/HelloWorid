@@ -36,15 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 String tempPhone = sp.getString("phone_" + phone, "error");
                 String tempPwd = sp.getString("pwd_" + phone, "error");
                 if (phone.equals(tempPhone) && pwd.equals(tempPwd)) {
-                    Bundle bundle = new Bundle();
+//                    Bundle bundle = new Bundle();
                     String userName = sp.getString("name_"+phone,"0");
                     String userSex = sp.getString("sex_"+phone,"0");
                     String userSms = "1".equals(sp.getString("sms_"+phone,"0"))?"接受":"不接受";
-                    UserInfo userInfo = new UserInfo(userName,pwd,userSex,phone,userSms);
-                    bundle.putSerializable("userInfo",userInfo);
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    intent.putExtras(bundle);
-                    startActivityForResult(intent,RESULT_CODE);
+//                    UserInfo userInfo = new UserInfo(userName,pwd,userSex,phone,userSms);
+//                    bundle.putSerializable("userInfo",userInfo);
+//                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+//                    intent.putExtras(bundle);
+//                    startActivityForResult(intent,RESULT_CODE);
+                    HomeActivity.actionStart(MainActivity.this,userName,pwd,userSex,phone,userSms,RESULT_CODE);
                 } else {
                     Toast.makeText(MainActivity.this, "手机号或密码错误！", Toast.LENGTH_LONG).show();
                 }
