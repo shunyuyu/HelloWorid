@@ -53,6 +53,7 @@ public class ResetPwdActivity extends AppCompatActivity {
                         intent.putExtra("phone_",phone);
                         startActivity(intent);
                         toast ="请填写新密码";
+                        finish();
                     }
                 }
                 Toast.makeText(ResetPwdActivity.this, toast, Toast.LENGTH_LONG).show();
